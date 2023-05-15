@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Auto reload",
+  "author": "Jim Adamson",
+  "description": "Automatically reload all open tabs at a defined interval",
+  "version": "0.0.0.1",
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+	"background": {
+    "service_worker": "scripts/service_worker.js"
+  },
+  "minimum_chrome_version": "109",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage"
+  ],
+  "icons": {
+        "48": "icons/1429370080_sign-out-black-48.png",
+        "128": "icons/1429370057_sign-out-black-128.png"
+  }
+}

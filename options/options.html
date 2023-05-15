@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="options.css" type="text/css">
+        <script src="options.js"></script>
+    </head>
+    <body>
+        <form id="form1">
+            <div id="table1">
+                <div><label title="How often should the tabs be reloaded">Reload interval in minutes:</label> <input id="reload_interval" type="number" step="1" min="1" max="1440" title="Min 1" required></div>
+                <div><label title="How long should the notification remain open for">Notification period in seconds:</label> <input id="notification_period" type="number" step="5" min="5" max="60" title="Min 5" required></div>
+            </div>
+            <div id="status"></div>
+            <button id="save" type="submit">Save</button>
+            <button id="reset" type="reset">Reset</button>
+        </form>
+        <!--
+        Currently the new options_ui doesn't show the HTML5 form validation balloons (?!).
+        Use "open_in_tab": true to force the old options page to make this work.
+        Note "open_in_tab" will be deprecated at some point in the future
+        -->
+    </body>
+</html>
