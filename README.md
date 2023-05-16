@@ -1,0 +1,3 @@
+# chromeextension-digitalsignage-autoreloadtabs
+
+A Chrome extension created for the University of York Library Digital Displays. The extension reloads all existing browsing tabs at a defined interval. The use-case for this extension is one in which a Google Drive hosted image is displayed on the Digital Displays, and provides a way of auto-refreshing the content after a manual update to the image has been made. Currently there's a scheduled task & Windows script in place to close Chrome and re-open it (see https://wiki.york.ac.uk/x/XYX_EQ). This Chrome extension can be used as an alternative and arguably slicker way of reloading the content.
