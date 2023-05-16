@@ -35,7 +35,7 @@
             const title = `${browser} tabs will be reloaded`
             const options = {
                 body: `${browser} will reload all open tabs in ${notificationSeconds} seconds`,
-                icon: '../icons/1429370080_sign-out-white-48.png',
+                icon: '../icons/refresh-white-48.png',
                 tag: notificationId,
                 requireInteraction: true
             }

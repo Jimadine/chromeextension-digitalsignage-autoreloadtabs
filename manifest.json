@@ -18,7 +18,7 @@
     "storage"
   ],
   "icons": {
-        "48": "icons/1429370080_sign-out-black-48.png",
-        "128": "icons/1429370057_sign-out-black-128.png"
+        "48": "icons/refresh-white-48.png",
+        "128": "icons/refresh-white-128.png"
   }
 }
