@@ -1,7 +1,6 @@
 (function() {
     let browser, notificationSeconds, reloadIntervalMinutes
     let alarmName = 'reloadAlarm' + (Math.floor(Math.random() * 1000)).toString()
-
     if (navigator.userAgentData) {
         let vendors = navigator.userAgentData.brands;
         if (vendors.filter(e => e.brand === 'Google Chrome').length > 0) {
@@ -15,10 +14,8 @@
         chrome.storage.local.get(['reload_interval', 'notification_period'], function(result) {
             reloadIntervalMinutes = parseInt(result.reload_interval) || 15;
             notificationSeconds = parseInt(result.notification_period) || 5;
-            chrome.alarms.clear(alarmName, function() {
-                chrome.alarms.create(alarmName, {
-                    'periodInMinutes': reloadIntervalMinutes
-                })
+            chrome.alarms.create(alarmName, {
+                'periodInMinutes': reloadIntervalMinutes
             })
         });
     }
