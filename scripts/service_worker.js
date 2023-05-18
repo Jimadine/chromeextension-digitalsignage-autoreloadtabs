@@ -43,22 +43,22 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.get(alarmName, (alarm) => {
     // Alarms are remembered by the browser so check for existence before replacing
     if (!alarm) {
-      chrome.storage.local.get(['reload_interval'], function(r) {
-        let reloadIntervalMinutes = parseInt(r.reload_interval) || 15;
-        chrome.alarms.create(alarmName, {
-          'periodInMinutes': reloadIntervalMinutes
-        })
-      })
+      setVars()
     }
   })
 })
 
 // Reload the values any time the user clicks "Save"
 chrome.storage.onChanged.addListener(function(changes, namespace) {
-  chrome.storage.local.get(['reload_interval'], function(r) {
-    let reloadIntervalMinutes = parseInt(r.reload_interval) || 15;
+  setVars()
+})
+
+function setVars() {
+  chrome.storage.local.get(['reload_interval', 'notification_period'], function(r) {
+    reloadIntervalMinutes = parseInt(r.reload_interval) || 15;
+    notificationSeconds = parseInt(r.notification_period) || 5;
     chrome.alarms.create(alarmName, {
       'periodInMinutes': reloadIntervalMinutes
     })
-  })
-})
+  });
+}
