@@ -3,7 +3,7 @@
   "name": "Auto reload",
   "author": "Jim Adamson",
   "description": "Automatically reload all open tabs at a defined interval",
-  "version": "0.0.0.1",
+  "version": "0.0.0.2",
   "options_ui": {
     "page": "options/options.html",
     "open_in_tab": true
